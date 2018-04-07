@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/signup',"AppControllers@signup");
+Route::post('/signin',"AppControllers@login");
+Route::post('/placeorder',"AppControllers@postOrder");
