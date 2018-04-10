@@ -24,7 +24,7 @@ Route::get('/dash', function () {
 Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
 Route::post('/placeorder',"AppControllers@postOrder");
-Route::post('/items',"AppControllers@items");
+Route::get('/items',"AppControllers@items");
 Route::get('/showOrders',"AppControllers@showOrders");
 Route::post('/stschage',"AppControllers@stschage");
 
