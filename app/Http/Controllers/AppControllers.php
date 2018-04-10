@@ -52,4 +52,18 @@ class AppControllers extends Controller
 		$data = json_encode(array('ch' => $ch, 'mt' => $mt,'fs'=>$fs,'bf'=>$bf,'fk'=>$fk,'ms'=>$fs,'ms'=>$ms));
 		return $data;
 	}
+	public function showOrders(){
+		$orders = Orders::where('sts','NOT')->get();
+		return $orders;		
+	}
+	public function stschage(Request $request){
+		//return $request->id;
+		$orders = Orders::where('ID',$request->id)->first();
+		$orders->sts = "OK";
+		Orders::where('ID',$request->id)->delete();
+		$orders->save();
+
+		return $orders;
+		//return $orders->save();
+	}
 }
