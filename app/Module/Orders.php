@@ -8,4 +8,6 @@ class Orders extends Model
     protected $table = 'Orders';
     public $timestamps = true;
     protected $guarded = [];
+    protected $dates = ['deleted_at'];
+
 }
