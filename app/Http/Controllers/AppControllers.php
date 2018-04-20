@@ -22,11 +22,12 @@ class AppControllers extends Controller
 	return "newuser";			
 	}
 	public function login(Request $request){
+		print_r($request->name);
 	$Persons = Persons::where('name',$request->get('name'))->where('password',$request->get('password'))->get();
 	if(count($Persons)!=0){
-    return "valideuser";
+		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}else{
-    return "invalideuser";
+		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}
 	}
 	public function postOrder(Request $request){
