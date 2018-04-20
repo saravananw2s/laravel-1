@@ -38,14 +38,16 @@ class AppControllers extends Controller
 	}
 	public function postOrder(Request $request){
 	$orders = new Orders();
-	$orders->name = $request->get('name');
-	$orders->number = $request->get('number');
-	$orders->address = $request->get('address');		
-	$orders->payment = $request->get('payment');		
-	$orders->items = $request->get('items');		
-	$orders->qtys = $request->get('qtys');				
+	$orders->name = $request->name;
+	$orders->number = $request->number;
+	$orders->address = $request->address;		
+	$orders->payment = $request->payment;		
+	$orders->items = $request->items;	
+	$orders->store = $request->store;			
+	$orders->totalprice = $request->totalprice;							
 	$orders->save();	
-	return response("ordercreated");
+	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
+	return $data;			
 	}
 
 	public function items(){
