@@ -80,4 +80,18 @@ class AppControllers extends Controller
 	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
 	return $data;
 	}
+	public function editprofile(Request $request){
+		$Persons = Persons::where('ID',$request->id)->first();
+	$Persons->name = $request->name;
+	$Persons->number = $request->number;	
+	$Persons->password =  $request->password;
+	$Persons->username = $request->usname;
+	$Persons->pincode = $request->pincode;	
+	$Persons->street =  $request->street;
+	$Persons->city =  $request->city;
+
+	$Persons->save();
+			$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
+	return $data;
+	}
 }
