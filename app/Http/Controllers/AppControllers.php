@@ -81,7 +81,9 @@ class AppControllers extends Controller
 	return $data;
 	}
 	public function editprofile(Request $request){
-		$Persons = Persons::where('ID',$request->id)->first();
+		Post::withTrashed()->find($request->id)->restore();
+
+		$Persons = Post::withTrashed()->find($request->id)->restore();
 	$Persons->name = $request->name;
 	$Persons->number = $request->number;	
 	$Persons->password =  $request->password;
