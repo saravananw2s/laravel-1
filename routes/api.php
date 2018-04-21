@@ -22,3 +22,5 @@ Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
 Route::post('/placeorder',"AppControllers@postOrder");
 Route::get('/getitem',"AppControllers@items");
+Route::get('/history',"AppControllers@history");
+
