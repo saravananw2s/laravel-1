@@ -28,7 +28,7 @@ class AppControllers extends Controller
 	return $data;			
 	}
 	public function login(Request $request){
-	$Persons = Persons::where('name',$request->name)->where('password',$request->pwd)->get();
+	$Persons = Persons::where('username',$request->name)->where('password',$request->pwd)->get();
 	if(count($Persons)!=0){
 		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}else{
@@ -39,6 +39,8 @@ class AppControllers extends Controller
 	public function postOrder(Request $request){
 	$orders = new Orders();
 	$orders->name = $request->name;
+
+	$orders->user_id = $request->user_id;
 	$orders->number = $request->number;
 	$orders->address = $request->address;		
 	$orders->payment = $request->payment;		
