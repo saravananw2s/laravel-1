@@ -75,7 +75,7 @@ class AppControllers extends Controller
 		return $orders;
 		//return $orders->save();
 	}
-	public history(){
+	public function history(){
 		$orders = Orders::where('user_id',$request->id)->get();	
 	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
 	return $data;
