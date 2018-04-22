@@ -46,7 +46,9 @@ class AppControllers extends Controller
 	$orders->payment = $request->payment;		
 	$orders->items = $request->items;	
 	$orders->store = $request->store;			
-	$orders->totalprice = $request->totalprice;							
+	$orders->totalprice = $request->totalprice;
+	$orders->sedate = $request->sedate;							
+	$orders->setime = $request->setime;														
 	$orders->save();	
 	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
 	return $data;			
