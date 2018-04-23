@@ -12,5 +12,8 @@ class Persons extends Model
     public $timestamps = false;
     protected $guarded = [];
     protected $dates = ['deleted_at'];
+    protected $primaryKey = 'ID';
+
+
 
 }

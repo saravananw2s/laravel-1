@@ -25,6 +25,9 @@ Route::get('/getitem',"AppControllers@items");
 Route::get('/history',"AppControllers@history");
 Route::get('/editprofile',"AppControllers@editprofile");
 Route::get('/showOrders',"AppControllers@showOrders");
+Route::post('/stschage',"AppControllers@stschage");
+Route::get('/showuser',"AppControllers@showusers");
+
 
 
 

@@ -48,7 +48,8 @@ class AppControllers extends Controller
 	$orders->store = $request->store;			
 	$orders->totalprice = $request->totalprice;
 	$orders->sedate = $request->sedate;							
-	$orders->setime = $request->setime;														
+	$orders->setime = $request->setime;
+			$orders->sts = "NOT";														
 	$orders->save();	
 	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
 	return $data;			
@@ -98,5 +99,13 @@ class AppControllers extends Controller
 	$Persons->save();
 			$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	return $data;
+	}
+	public function showusers(Request $request)
+	{
+				$Persons = Persons::all();
+				$data = json_encode(array('Persons' => $Persons));
+				return $data;
+
+		# code...
 	}
 }
