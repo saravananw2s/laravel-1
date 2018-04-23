@@ -73,11 +73,25 @@ class AppControllers extends Controller
 		//return $request->id;
 		$orders = Orders::where('ID',$request->id)->first();
 		$orders->sts = "OK";
-		Orders::where('ID',$request->id)->delete();
 		$orders->save();
 
 		return $orders;
 		//return $orders->save();
+	}
+	public function updateprice(Request $request){
+		//return $request->id;
+		$orders = Items::where('id',$request->id)->first();
+		$orders->price = $request->price;
+		$orders->save();
+
+		return $orders;
+		//return $orders->save();
+	}
+
+	public function ordershistory(Request $request){
+		$orders = Orders::all();	
+	$data = json_encode(array('orders' => $orders));
+	return $data;
 	}
 	public function history(Request $request){
 		$orders = Orders::where('user_id',$request->id)->get();	

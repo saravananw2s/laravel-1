@@ -27,6 +27,9 @@ Route::get('/editprofile',"AppControllers@editprofile");
 Route::get('/showOrders',"AppControllers@showOrders");
 Route::post('/stschage',"AppControllers@stschage");
 Route::get('/showuser',"AppControllers@showusers");
+Route::post('/updateprice',"AppControllers@updateprice");
+Route::post('/ordershistory',"AppControllers@ordershistory");
+
 
 
 

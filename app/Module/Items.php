@@ -8,4 +8,6 @@ class Items extends Model
     protected $table = 'items';
     public $timestamps = true;
     protected $guarded = [];
+        protected $primaryKey = 'Id';
+
 }
