@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
+Route::post('/adminsignin',"AppControllers@adminsignin");
+
 Route::post('/placeorder',"AppControllers@postOrder");
 Route::get('/getitem',"AppControllers@items");
 Route::get('/history',"AppControllers@history");
