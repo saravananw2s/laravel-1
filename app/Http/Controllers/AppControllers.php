@@ -28,7 +28,7 @@ class AppControllers extends Controller
 	return $data;			
 	}
 	public function adminsignin(Request $request){
-	if(count($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
+	if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
 		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}else{
 		$data = json_encode(array('login' => "invaliduser", 'Persons' => $Persons));
