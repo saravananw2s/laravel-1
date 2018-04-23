@@ -59,7 +59,6 @@ class AppControllers extends Controller
 		$ch = Items::where('cate','CK')->get();
 		$mt = Items::where('cate','MT')->get();
 		$fs = Items::where('cate','FS')->get();
-		$ch = Items::where('cate','KD')->get();
 		$bf = Items::where('cate','BF')->get();
 		$fk = Items::where('cate','FK')->get();
 		$ms = Items::where('cate','MS')->get();  
