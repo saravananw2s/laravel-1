@@ -28,8 +28,6 @@ class AppControllers extends Controller
 	return $data;			
 	}
 	public function adminsignin(Request $request){
-		if()
-	$Persons = Persons::where('username',$request->name)->where('password',$request->pwd)->get();
 	if(count($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
 		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}else{
