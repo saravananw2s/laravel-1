@@ -24,5 +24,7 @@ Route::post('/placeorder',"AppControllers@postOrder");
 Route::get('/getitem',"AppControllers@items");
 Route::get('/history',"AppControllers@history");
 Route::get('/editprofile',"AppControllers@editprofile");
+Route::get('/showOrders',"AppControllers@showOrders");
+
 
 
