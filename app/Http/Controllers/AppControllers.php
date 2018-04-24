@@ -29,9 +29,9 @@ class AppControllers extends Controller
 	}
 	public function adminsignin(Request $request){
 	if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
-		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
+		$data = json_encode(array('login' => "validuser"));
 	}else{
-		$data = json_encode(array('login' => "invaliduser", 'Persons' => $Persons));
+		$data = json_encode(array('login' => "invaliduser"));
 	}
 	return $data;
 	}
