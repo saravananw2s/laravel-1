@@ -14,6 +14,11 @@ use Validator;
 class AppControllers extends Controller
 {
 	public function signup(Request $request){
+    $Persons = Persons::where('number',$request->name)->first();
+    if(count($Persons)!=0){
+	$data = json_encode(array('login' => "invaliduser", 'Persons' => "Mobile Number Alredy Exist"));
+    	return $data;			
+    }
 	$Persons = new Persons();
 	$Persons->name = $request->name;
 	$Persons->number = $request->number;	
@@ -31,12 +36,12 @@ class AppControllers extends Controller
 	if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
 		$data = json_encode(array('login' => "validuser"));
 	}else{
-		$data = json_encode(array('login' => "invaliduser"));
+		$data = json_encode(array('login' => "invaliduser");
 	}
 	return $data;
 	}
 	public function login(Request $request){
-	$Persons = Persons::where('username',$request->name)->where('password',$request->pwd)->get();
+	$Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->get();
 	if(count($Persons)!=0){
 		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 	}else{
@@ -62,7 +67,6 @@ class AppControllers extends Controller
 	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
 	return $data;			
 	}
-
 	public function items(){
 		$ch = Items::where('cate','CK')->get();
 		$mt = Items::where('cate','MT')->get();

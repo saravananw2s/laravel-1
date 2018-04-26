@@ -14,11 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
+Route::get('/offer', function () {
     return view('login');
 });
-Route::get('/dash', function () {
+Route::get('/about', function () {
     return view('dashboard');
+});
+Route::get('/ship', function () {
+    return view('page');
 });
 
 Route::post('/signup',"AppControllers@signup");
