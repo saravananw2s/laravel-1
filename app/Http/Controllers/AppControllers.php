@@ -36,7 +36,7 @@ class AppControllers extends Controller
 	if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
 		$data = json_encode(array('login' => "validuser"));
 	}else{
-		$data = json_encode(array('login' => "invaliduser");
+		$data = json_encode(array('login' => "invaliduser"));
 	}
 	return $data;
 	}
