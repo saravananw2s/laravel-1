@@ -14,7 +14,7 @@ use Validator;
 class AppControllers extends Controller
 {
 	public function signup(Request $request){
-    $Persons = Persons::where('number',$request->name)->first();
+    $Persons = Persons::where('number',$request->number)->first();
     if(count($Persons)!=0){
 	$data = json_encode(array('login' => "invaliduser", 'Persons' => "Mobile Number Alredy Exist"));
     	return $data;			
