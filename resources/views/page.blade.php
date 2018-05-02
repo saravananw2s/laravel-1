@@ -61,6 +61,6 @@ Cancellation of your order/service by Gononveg/The Company/the Customer: At any 
     width: 100%;
     padding: 10px;
     padding-left: 40%;
-">Design and Maintained by Lemurianz</div>
+">Designed and Maintain by Lemurianz</div>
 </body>
 </html>
