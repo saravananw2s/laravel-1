@@ -34,6 +34,6 @@
     font-size: 20px;
     padding: 10px;
     padding-left: 40%;
-">Designed and Maintain by Lemurianz</div>
+">Designed and Maintained by Lemurianz</div>
 </body>
 </html>
