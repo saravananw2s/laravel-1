@@ -56,6 +56,8 @@ Cancellation of your order/service by Gononveg/The Company/the Customer: At any 
     bottom:  0;
     position:  fixed;
     background:  green;
+    color: white;
+    font-size: 20px;
     width: 100%;
     padding: 10px;
     padding-left: 40%;

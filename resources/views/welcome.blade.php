@@ -39,6 +39,8 @@
    <div style="
     bottom:  0;
     position:  absolute;
+    color: white;
+    font-size: 20px;
     background:  green;
     width: 100%;
     padding: 10px;
@@ -48,7 +50,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 1, 2018 00:00:01").getTime();
+var countDownDate = new Date("May 13, 2018 00:00:01").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

@@ -32,6 +32,8 @@
     bottom:  0;
     position:  absolute;
     background:  green;
+    color: white;
+    font-size: 20px;
     width: 100%;
     padding: 10px;
     padding-left: 40%;

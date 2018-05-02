@@ -30,6 +30,8 @@
     position:  absolute;
     background:  green;
     width: 100%;
+    color: white;
+    font-size: 20px;
     padding: 10px;
     padding-left: 40%;
 ">Design and Maintained by Lemurianz</div>
