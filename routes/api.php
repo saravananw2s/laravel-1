@@ -45,4 +45,5 @@ Route::post('delivery',"AppControllers@delivery");
 Route::post('/offers',"AppControllers@offers");
 Route::post('/showoffers',"AppControllers@showoffers");
 Route::post('/pincode',"AppControllers@pincode");
+Route::post('/stores',"AppControllers@stores");
 
