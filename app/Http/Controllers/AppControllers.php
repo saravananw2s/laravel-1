@@ -8,6 +8,7 @@ use App\Module\Orders;
 use App\Module\Items;
 use App\Module\Slats;
 use App\Module\offer;
+use App\Module\pincode;
 
 use Illuminate\Http\Response;
 
@@ -20,44 +21,41 @@ use Validator;
 class AppControllers extends Controller
 {
 	public function emp(Request $request){
-	return Persons::where('role','emp')->get();	
-}
+		return Persons::where('role','emp')->get();	
+    }
 	public function delivery(Request $request){
-	$orders = Orders::where('ID',$request->id)->first();
-        $orders->del="OK";
-	$orders->update();
+		$orders = Orders::where('ID',$request->id)->first();
+	        $orders->del="OK";
+		$orders->update();
 	}
 	public function reset(Request $request){
-	for($i=1;$i<=6;$i++){
-	$countslat = Slats::where('ID',$i)->first();	
-	$countslat->pendingcount = 50;
-	$countslat->save();
+		for($i=1;$i<=6;$i++){
+		$countslat = Slats::where('ID',$i)->first();	
+		$countslat->pendingcount = 50;
+		$countslat->save();
+		}
 	}
-	
-	}
-
 	 public function close(Request $request){
         for($i=1;$i<=1;$i++){
         $countslat = Slats::where('ID',$i)->first();    
         $countslat->pendingcount = 50;
         $countslat->save();
         }
-
-        }
-        public function offers(Request $request){
-	$offer = Offer::where('id',1)->first();
-	$offer->sdate=$request->sdate;
-	$offer->edate=$request->edate;
-	$offer->offer=$request->offer;
-	$offer->update();
-	return $offer;
+    }
+     public function offers(Request $request){
+		$offer = Offer::where('id',1)->first();
+		$offer->sdate=$request->sdate;
+		$offer->edate=$request->edate;
+		$offer->offer=$request->offer;
+		$offer->update();
+		return $offer;
 	}
 	public function showoffers(){
-	return Offer::where('id',1)->first();
+		return Offer::where('id',1)->first();
 	} 
 	public function showslat(Request $request){
-	$countslat = Slats::where('stotname',$request->setime)->first();
-	return $countslat;
+		$countslat = Slats::where('stotname',$request->setime)->first();
+		return $countslat;
 	}
 	public function showmyorder(Request $request){
 		$orders = Orders::where('employee',$request->id)->where('del','NOT OK')->get(); 
@@ -65,7 +63,7 @@ class AppControllers extends Controller
         return $data;
 	}
 	public function emplogin(Request $request){
-	 $Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->where('role','emp')->get();
+	   $Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->where('role','emp')->get();
         if(count($Persons)!=0){
                 $data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
         }else{
@@ -74,103 +72,94 @@ class AppControllers extends Controller
         return $data;
 	}
 	public function assign(Request $request){
-	  $Orders = Orders::where('ID',$request->id)->first();
+	   $Orders = Orders::where('ID',$request->id)->first();
       		$Orders->employee = $request->employee;
 		$Orders->update();
 
-        }
-	public function signup(Request $request){
-    $Persons = Persons::where('number',$request->number)->first();
-    if(count($Persons)!=0){
-	$data = json_encode(array('login' => "invaliduser", 'Persons' => "Mobile Number Alredy Exist"));
-    	return $data;			
     }
-	$Persons = new Persons();
-	$Persons->name = $request->name;
-	$Persons->number = $request->number;	
-	$Persons->password =  $request->password;
-	$Persons->username = $request->usname;
-	$Persons->pincode = $request->pincode;	
-	$Persons->street =  $request->street;
-        $Persons->street1 =  $request->street1;
-	$Persons->city =  $request->city;
+	public function signup(Request $request){
+	    $Persons = Persons::where('number',$request->number)->first();
+	    if(count($Persons)!=0){
+		$data = json_encode(array('login' => "invaliduser", 'Persons' => "Mobile Number Alredy Exist"));
+	    	return $data;			
+	    }
+		$Persons = new Persons();
+		$Persons->name = $request->name;
+		$Persons->number = $request->number;	
+		$Persons->password =  $request->password;
+		$Persons->username = $request->usname;
+		$Persons->pincode = $request->pincode;	
+		$Persons->street =  $request->street;
+	    $Persons->street1 =  $request->street1;
+		$Persons->city =  $request->city;
 
-	$Persons->save();
-			$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
-	return $data;			
+		$Persons->save();
+				$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
+		return $data;			
 	}
 	public function adminsignin(Request $request){
-	if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
-		$data = json_encode(array('login' => "validuser"));
-	}else{
-		$data = json_encode(array('login' => "invaliduser"));
-	}
-	return $data;
+		if($request->name == 'goadmin' && $request->pwd == "gononveg@23456"){
+			$data = json_encode(array('login' => "validuser"));
+		}else{
+			$data = json_encode(array('login' => "invaliduser"));
+		}
+		return $data;
 	}
 	public function login(Request $request){
-	$Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->get();
-	if(count($Persons)!=0){
-		$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
-	}else{
-		$data = json_encode(array('login' => "invaliduser", 'Persons' => $Persons));
-	}
-	return $data;
-	}
-	public function postOrder(Request $request){
-        //if($request->dellat == null){
-	//$data = json_encode(array('status' => "noordercreated", 'orders' => "Please Pin the delivery Point"));
-	//return $data;
-	//}
-	$orders = new Orders();
-	$orders->name = $request->name;
+			$Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->get();
+			if(count($Persons)!=0){
+				$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
+			}else{
+				$data = json_encode(array('login' => "invaliduser", 'Persons' => $Persons));
+			}
+			return $data;
+			}
+			public function postOrder(Request $request){
+		        //if($request->dellat == null){
+			//$data = json_encode(array('status' => "noordercreated", 'orders' => "Please Pin the delivery Point"));
+			//return $data;
+			//}
+			$orders = new Orders();
+			$orders->name = $request->name;
 
-	$orders->user_id = $request->user_id;
-	$orders->number = $request->number;
-	$orders->address = $request->address;		
-	$orders->payment = $request->payment;		
-	$orders->items = $request->items;	
-	$orders->store = $request->store;			
-	$orders->totalprice = $request->totalprice;
-	$orders->sedate = $request->sedate;							
-	$orders->setime = $request->setime;
-			$orders->sts = "NOT";				
-$orders->del = "NOT OK";										
-//	$orders->save();
-//return $orders->setime;
-$countslat = Slats::where('stotname',$orders->setime)->first();
-//return $countslat;
-$count = $countslat->pendingcount;
-if($count == 0){
-$countslat->express = $countslat->express + 1;
-$countslat->save();
-$orders->delivery = "Express";
-}else{
-$countslat->pendingcount = $count-1;
-$countslat->save();
-$orders->delivery = "Free";
-}
-   $orders->cust_lat = $request->dellat;
-   $orders->cust_lng = $request->dellng;
+			$orders->user_id = $request->user_id;
+			$orders->number = $request->number;
+			$orders->address = $request->address;		
+			$orders->payment = $request->payment;		
+			$orders->items = $request->items;	
+			$orders->store = $request->store;			
+			$orders->totalprice = $request->totalprice;
+			$orders->sedate = $request->sedate;							
+			$orders->setime = $request->setime;
+					$orders->sts = "NOT";				
+			$orders->del = "NOT OK";										
+			//	$orders->save();
+			//return $orders->setime;
+			$countslat = Slats::where('stotname',$orders->setime)->first();
+			//return $countslat;
+			$count = $countslat->pendingcount;
+			if($count == 0){
+			$countslat->express = $countslat->express + 1;
+			$countslat->save();
+			$orders->delivery = "Express";
+			}else{
+			$countslat->pendingcount = $count-1;
+			$countslat->save();
+			$orders->delivery = "Free";
+			}
+			   $orders->cust_lat = $request->dellat;
+			   $orders->cust_lng = $request->dellng;
 
-$orders->save();
-//return $orders;
-Session::put('number',$request->number);
-Session::put('name',$request->name); 	
-	$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
-#	Sms::send("Text to send.", function($sms) {
-#    $sms->to(['9789311916', '9944825723']);
-#});
-Sms::with('textlocal')->send('Dear '.$orders->name.', Your Order is Placed OrderId#'.$orders->ID .', and your Order value is'.$orders->totalprice.', delivery schedule at'.$orders->sedate.', '.$orders->setime, function($sms) {
-#print_r(Session::get('number'));   
- $sms->to('+91'.Session::get('number')); 
-});
-	
-return $data;			
+			$orders->save();
+			Session::put('number',$request->number);
+			Session::put('name',$request->name); 	
+			$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
+		    Sms::with('textlocal')->send('Dear '.$orders->name.', Your Order is Placed OrderId#'.$orders->ID .', and your Order value is'.$orders->totalprice.', delivery schedule at'.$orders->sedate.', '.$orders->setime, function($sms) {
+			 $sms->to('+91'.Session::get('number')); 
+			});			
+		    return $data;			
 	}
 	public function items(Request $request){
-#Sms::with('textlocal')->send("Text to send.", function($sms) {
-#    $sms->to(['+916382040636']); 
-#});		if($request->place != '600100' && $request->place != '604001'){
                  $data = json_encode(array('ch' => 'SNA'));
 		}
 		if($request->place){
@@ -243,19 +232,28 @@ return $data;
 				$data = json_encode(array('Persons' => $Persons));
 				return $data;
 
-		# code...
 	}
 	public function resetpass(Request $request){
-Session::put('number',$request->number);
- $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+    Session::put('number',$request->number);
+    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
     $pass = substr( str_shuffle( $chars ), 0, 8 );
 	Sms::with('textlocal')->send('your new password is'.$pass,function($sms) {
- $sms->to('+91'.Session::get('number')); 
-});
-$persons = Persons::where('number',$request->number)->first();
-$persons->password =  $pass;
-$persons->save();
-//return Session::get('number');
-return $persons;
-}
+	 $sms->to('+91'.Session::get('number')); 
+	});
+	$persons = Persons::where('number',$request->number)->first();
+	$persons->password =  $pass;
+	$persons->save();
+	return $persons;
+	}
+	public function pincode(Request $request){
+		$pincode = pincode::where('pincode',$request)->get()
+		if(count($pincode) == 0{
+			$data = json_encode(array('sts' => 'ok'));
+			return $data;
+		}else{
+			$data = json_encode(array('sts' => 'not','msg'=>"Service Not Available Your Location"));
+			return $data;
+		}
+	}
+
 }
