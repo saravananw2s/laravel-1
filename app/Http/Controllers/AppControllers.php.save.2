@@ -167,23 +167,16 @@ Sms::with('textlocal')->send('Dear '.$orders->name.', Your Order is Placed Order
 	
 return $data;			
 	}
-	public function items(Request $request){
+	public function items(){
 #Sms::with('textlocal')->send("Text to send.", function($sms) {
 #    $sms->to(['+916382040636']); 
-#});		if($request->place != '600100' && $request->place != '604001'){
-                 $data = json_encode(array('ch' => 'SNA'));
-		}
-		if($request->place){
-			                $pincode = 'pin'.$request->place;
-		}else{
-		                $pincode = 'pin600100';
-		}
-		$ch = Items::where('cate','CK')->get(['id','name','image','cate',$pincode.' AS price']);
-		$mt = Items::where('cate','MT')->get(['id','name','image','cate',$pincode.' AS price']);
-		$fs = Items::where('cate','FS')->get(['id','name','image','cate',$pincode.' AS price']);
-		$bf = Items::where('cate','BF')->get(['id','name','image','cate',$pincode.' AS price']);
-		$fk = Items::where('cate','FK')->get(['id','name','image','cate',$pincode.' AS price']);
-		$ms = Items::where('cate','MS')->get(['id','name','image','cate',$pincode.' AS price']);  
+#});
+		$ch = Items::where('cate','CK')->get();
+		$mt = Items::where('cate','MT')->get();
+		$fs = Items::where('cate','FS')->get();
+		$bf = Items::where('cate','BF')->get();
+		$fk = Items::where('cate','FK')->get();
+		$ms = Items::where('cate','MS')->get();  
 		$data = json_encode(array('ch' => $ch, 'mt' => $mt,'fs'=>$fs,'bf'=>$bf,'fk'=>$fk,'ms'=>$fs,'ms'=>$ms));
 		return $data;
 	}
@@ -201,11 +194,10 @@ return $data;
 		//return $orders->save();
 	}
 	public function updateprice(Request $request){
-		
 		//return $request->id;
-		$code ='pin'.$request->place;
+		return 'pin'.$request->pincode;
 		$orders = Items::where('id',$request->id)->first();
-		$orders->$code = $request->price;
+		$orders->price = $request->price;
 		$orders->save();
 
 		return $orders;

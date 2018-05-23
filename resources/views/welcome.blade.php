@@ -32,8 +32,8 @@
     text-transform:  uppercase;
     color:  green;
 ">Welcome To Go Non Veg </p>
-<p id="demo" style="font-size: 155px;    color: darkorange;
-    font-family: serif"></p>
+<a href="https://play.google.com/store/apps/details?id=io.ionic.gononveg" style="text-decoration: none"><p style="font-size: 66px;    color: darkorange;
+    font-family: serif;text-decoration: none">DOWNLOAD APP HERE!!!!</p></a>
 
 
    <div style="

@@ -163,7 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+	    Tzsk\Sms\Provider\SmsServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -225,6 +225,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+    'Sms' => Tzsk\Sms\Facade\Sms::class,
+
 
     ],
 

@@ -23,6 +23,10 @@ Route::get('/about', function () {
 Route::get('/ship', function () {
     return view('page');
 });
+Route::get('/location', function () {
+    return view('location');
+});
+
 
 Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");

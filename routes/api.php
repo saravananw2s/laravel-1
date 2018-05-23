@@ -31,8 +31,17 @@ Route::post('/stschage',"AppControllers@stschage");
 Route::get('/showuser',"AppControllers@showusers");
 Route::post('/updateprice',"AppControllers@updateprice");
 Route::post('/ordershistory',"AppControllers@ordershistory");
+Route::post('/resetpass',"AppControllers@resetpass");
+Route::post('/assign',"AppControllers@assign");
+Route::post('/emplogin',"AppControllers@emplogin");
 
+Route::post('/emp',"AppControllers@emp");
+Route::post('/showmyorders',"AppControllers@showmyorder");
+Route::post('/reset',"AppControllers@reset");
+Route::post('/showslot',"AppControllers@showslat");
 
-
-
+Route::post('/close',"AppControllers@close");
+Route::post('delivery',"AppControllers@delivery");
+Route::post('/offers',"AppControllers@offers");
+Route::post('/showoffers',"AppControllers@showoffers");
 
