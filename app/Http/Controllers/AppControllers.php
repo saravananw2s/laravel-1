@@ -9,7 +9,7 @@ use App\Module\Items;
 use App\Module\Slats;
 use App\Module\offer;
 use App\Module\pincode;
-
+use App\Module\stores;
 use Illuminate\Http\Response;
 
 use Tzsk\Sms\Facade\Sms;
@@ -253,6 +253,10 @@ class AppControllers extends Controller
 			$data = json_encode(array('sts' => 'not','msg'=>"Service Not Available Your Location"));
 			return $data;
 		}
+	}
+	public function stores(Request $request){
+		$stores = stores::where()->get('pincode',$request->place);
+		return json_encode(array('stores' => $stores));
 	}
 
 }
