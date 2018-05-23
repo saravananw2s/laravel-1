@@ -246,7 +246,7 @@ class AppControllers extends Controller
 	}
 	public function pincode(Request $request){
 		$pincode = pincode::where('pincode',$request)->get();
-		if(count($pincode) == 0{
+		if(count($pincode) == 0){
 			$data = json_encode(array('sts' => 'ok'));
 			return $data;
 		}else{
