@@ -255,7 +255,7 @@ class AppControllers extends Controller
 		}
 	}
 	public function stores(Request $request){
-		$stores = stores::where()->get('pincode',$request->place);
+		$stores = stores::where('pincode',$request->place)->get();
 		return json_encode(array('stores' => $stores));
 	}
 
