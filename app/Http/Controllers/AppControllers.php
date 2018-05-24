@@ -256,7 +256,7 @@ class AppControllers extends Controller
 			$data = json_encode(array('sts' => 'ok'));
 			return $data;
 		}else{
-			$data = json_encode(array('sts' => 'not','msg'=>"Service Not Available Your Location"));
+			$data = json_encode(array('sts' => 'not','msg'=>"Service Not Available at Your Location"));
 			return $data;
 		}
 	}
