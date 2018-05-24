@@ -153,7 +153,7 @@ class AppControllers extends Controller
 			$orders->save();
 			if($request->account == 'login'){
 				$persons = Persons::where('ID',$request->userid)->first();
-				$persons->wallet = $persons->wallet - 10;
+				$persons->wallet = $persons->wallet - 20;
 				$persons->update();
 
 			}
