@@ -151,6 +151,12 @@ class AppControllers extends Controller
 			   $orders->cust_lng = $request->dellng;
 
 			$orders->save();
+			if($request->account == 'login'){
+				$persons = Persons::where('ID',$request->userid)->first();
+				$persons->wallet = $persons->wallet - 10;
+				$persons->update();
+
+			}
 			Session::put('number',$request->number);
 			Session::put('name',$request->name); 	
 			$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
@@ -257,6 +263,10 @@ class AppControllers extends Controller
 	public function stores(Request $request){
 		$stores = stores::where('pincode',$request->place)->get();
 		return json_encode(array('stores' => $stores));
+	}
+	public function userinfo(Request $request){
+		$userinfo = Persons::where('ID',$request->user_id)->get();
+		return $userinfo;
 	}
 
 }
