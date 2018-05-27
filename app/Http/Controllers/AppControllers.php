@@ -8,6 +8,7 @@ use App\Module\Orders;
 use App\Module\Items;
 use App\Module\Slats;
 use App\Module\offer;
+use App\Module\myoffers;
 use App\Module\pincode;
 use App\Module\stores;
 use Illuminate\Http\Response;
@@ -54,7 +55,7 @@ class AppControllers extends Controller
 		return Offer::where('id',1)->first();
 	} 
 	public function showmyoffers(Request $request){
-		return Offer::where('id',$request->myoffer)->first();
+		return myoffers::where('id',$request->myoffer)->first();
 	} 
 	public function showslat(Request $request){
 		$countslat = Slats::where('stotname',$request->setime)->first();
