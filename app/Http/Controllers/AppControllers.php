@@ -53,6 +53,9 @@ class AppControllers extends Controller
 	public function showoffers(){
 		return Offer::where('id',1)->first();
 	} 
+	public function showmyoffers(Request $request){
+		return Offer::where('id',$request->myoffer)->first();
+	} 
 	public function showslat(Request $request){
 		$countslat = Slats::where('stotname',$request->setime)->first();
 		return $countslat;
@@ -141,7 +144,7 @@ class AppControllers extends Controller
 			if($count == 0){
 			$countslat->express = $countslat->express + 1;
 			$countslat->save();
-			$orders->delivery = "Express";
+			$orders->delivery = "Paid";
 			}else{
 			$countslat->pendingcount = $count-1;
 			$countslat->save();
