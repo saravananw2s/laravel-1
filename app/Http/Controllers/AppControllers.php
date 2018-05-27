@@ -166,7 +166,6 @@ class AppControllers extends Controller
 		    return $data;			
 	}
 	public function items(Request $request){
-        $data = json_encode(array('ch' => 'SNA'));
 		if($request->place){
 			                $pincode = 'pin'.$request->place;
 		}else{
