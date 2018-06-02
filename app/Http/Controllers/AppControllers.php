@@ -272,7 +272,7 @@ class AppControllers extends Controller
 		return $userinfo;
 	}
 	public function uploadfile(Request $request){
-	  $file = $request->file('image');
+	  $file = $request->image;
       $destinationPath = 'uploads';
       $file->move($destinationPath,$file->getClientOriginalName());
 	}
