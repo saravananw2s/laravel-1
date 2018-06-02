@@ -271,7 +271,7 @@ class AppControllers extends Controller
 		$userinfo = Persons::where('ID',$request->user_id)->get();
 		return $userinfo;
 	}
-	public function uploadfile(){
+	public function uploadfile($Request request){
 	  $file = $request->file('image');
       $destinationPath = 'uploads';
       $file->move($destinationPath,$file->getClientOriginalName());

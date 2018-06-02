@@ -48,4 +48,5 @@ Route::post('/pincode',"AppControllers@pincode");
 Route::post('/stores',"AppControllers@stores");
 Route::post('/userinfo',"AppControllers@userinfo");
 Route::post('/showmyoffers',"AppControllers@showmyoffers");
+Route::post('/uploadfile',"AppControllers@uploadfile");
 
