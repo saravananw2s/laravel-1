@@ -96,7 +96,7 @@ class AppControllers extends Controller
 		$Persons->street =  $request->street;
 	    $Persons->street1 =  $request->street1;
 		$Persons->city =  $request->city;
-        $Persons->wallet 200;
+        $Persons->wallet = 200;
 		$Persons->save();
 				$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 		return $data;			
