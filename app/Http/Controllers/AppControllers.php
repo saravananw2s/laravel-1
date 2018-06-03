@@ -145,7 +145,11 @@ class AppControllers extends Controller
 			if($count == 0){
 			$countslat->express = $countslat->express + 1;
 			$countslat->save();
-			$orders->delivery = "Paid Delivery";
+			if($orders->setime == '11AM - 1PM' || $orders->setime == '2PM - 4PM'){
+							$orders->delivery = "Free Delivery";
+			}else{
+							$orders->delivery = "Paid Delivery";
+			}
 			}else{
 			$countslat->pendingcount = $count-1;
 			$countslat->save();
