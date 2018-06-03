@@ -119,10 +119,10 @@ class AppControllers extends Controller
 			return $data;
 			}
 			public function postOrder(Request $request){
-		        //if($request->dellat == null){
-			//$data = json_encode(array('status' => "noordercreated", 'orders' => "Please Pin the delivery Point"));
-			//return $data;
-			//}
+		        if($request->dellat == null){
+			$data = json_encode(array('status' => "noordercreated", 'orders' => "Please Pin the delivery Point"));
+			return $data;
+			}
 			$orders = new Orders();
 			$orders->name = $request->name;
 
@@ -225,7 +225,6 @@ class AppControllers extends Controller
 	$Persons->name = $request->name;
 	$Persons->number = $request->number;	
 	$Persons->password =  $request->password;
-	$Persons->username = $request->usname;
 	$Persons->pincode = $request->pincode;	
 	$Persons->street =  $request->street;
 	$Persons->city =  $request->city;
