@@ -91,12 +91,12 @@ class AppControllers extends Controller
 		$Persons->name = $request->name;
 		$Persons->number = $request->number;	
 		$Persons->password =  $request->password;
-		$Persons->username = $request->usname;
+		$Persons->username = $request->number;
 		$Persons->pincode = $request->pincode;	
 		$Persons->street =  $request->street;
 	    $Persons->street1 =  $request->street1;
 		$Persons->city =  $request->city;
-
+        $Persons->wallet 200;
 		$Persons->save();
 				$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 		return $data;			
@@ -110,7 +110,7 @@ class AppControllers extends Controller
 		return $data;
 	}
 	public function login(Request $request){
-			$Persons = Persons::where('number',$request->name)->where('password',$request->pwd)->get();
+			$Persons = Persons::where('username',$request->name)->where('password',$request->pwd)->get();
 			if(count($Persons)!=0){
 				$data = json_encode(array('login' => "validuser", 'Persons' => $Persons));
 			}else{
@@ -145,11 +145,11 @@ class AppControllers extends Controller
 			if($count == 0){
 			$countslat->express = $countslat->express + 1;
 			$countslat->save();
-			$orders->delivery = "Paid";
+			$orders->delivery = "Paid Delivery";
 			}else{
 			$countslat->pendingcount = $count-1;
 			$countslat->save();
-			$orders->delivery = "Free";
+			$orders->delivery = "Free Delivery";
 			}
 			   $orders->cust_lat = $request->dellat;
 			   $orders->cust_lng = $request->dellng;
