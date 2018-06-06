@@ -118,7 +118,7 @@ class AppControllers extends Controller
 			}
 			return $data;
 			}
-			public function postOrder(Request $request){
+	public function postOrder(Request $request){
 		        if($request->dellat == null){
 			$data = json_encode(array('status' => "noordercreated", 'orders' => "Please Pin the delivery Point"));
 			return $data;
@@ -147,13 +147,17 @@ class AppControllers extends Controller
 			$countslat->save();
 			if($orders->setime == '11AM - 1PM' || $orders->setime == '2PM - 4PM'){
 							$orders->delivery = "Free Delivery";
+						    $orders->delcharge = 0;
+
 			}else{
 							$orders->delivery = "Paid Delivery";
+							$orders->delcharge = 30;
 			}
 			}else{
 			$countslat->pendingcount = $count-1;
 			$countslat->save();
 			$orders->delivery = "Free Delivery";
+			$orders->delcharge = 0;
 			}
 			   $orders->cust_lat = $request->dellat;
 			   $orders->cust_lng = $request->dellng;
@@ -163,8 +167,8 @@ class AppControllers extends Controller
 				$persons = Persons::where('ID',$request->userid)->first();
 				$persons->wallet = $persons->wallet - 20;
 				$persons->update();
-
-			}
+				$orders->wallet = 20;
+			};
 			Session::put('number',$request->number);
 			Session::put('name',$request->name); 	
 			$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
