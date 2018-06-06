@@ -162,13 +162,13 @@ class AppControllers extends Controller
 			   $orders->cust_lat = $request->dellat;
 			   $orders->cust_lng = $request->dellng;
 
-			$orders->save();
 			if($request->account == 'login'){
 				$persons = Persons::where('ID',$request->userid)->first();
 				$persons->wallet = $persons->wallet - 20;
 				$persons->update();
 				$orders->wallet = 20;
 			};
+		    $orders->save();
 			Session::put('number',$request->number);
 			Session::put('name',$request->name); 	
 			$data = json_encode(array('status' => "ordercreated", 'orders' => $orders));
