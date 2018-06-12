@@ -166,7 +166,7 @@ class AppControllers extends Controller
 					$persons = Persons::where('ID',$request->userid)->first();
 					if($persons->wallet > 20){
 					$repoint = $request->totalprice / 100;
-					$persons->wallet = $persons->wallet - 20 + floor($repoint);
+					$persons->wallet = $persons->wallet - 20 + (floor($repoint) * 2);
 					$persons->update();
 					$orders->wallet = 20;
 				}				
