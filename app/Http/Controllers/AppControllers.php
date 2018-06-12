@@ -163,10 +163,13 @@ class AppControllers extends Controller
 			   $orders->cust_lng = $request->dellng;
 
 			if($request->account == 'login'){
-				$persons = Persons::where('ID',$request->userid)->first();
-				$persons->wallet = $persons->wallet - 20;
-				$persons->update();
-				$orders->wallet = 20;
+				if($persons->wallet > 20){
+					$persons = Persons::where('ID',$request->userid)->first();
+					$repoint = $request->totalprice / 100;
+					$persons->wallet = $persons->wallet - 20 + floor($repoint);
+					$persons->update();
+					$orders->wallet = 20;
+				}				
 			};
 		    $orders->save();
 			Session::put('number',$request->number);
