@@ -163,8 +163,8 @@ class AppControllers extends Controller
 			   $orders->cust_lng = $request->dellng;
 
 			if($request->account == 'login'){
-				if($persons->wallet > 20){
 					$persons = Persons::where('ID',$request->userid)->first();
+					if($persons->wallet > 20){
 					$repoint = $request->totalprice / 100;
 					$persons->wallet = $persons->wallet - 20 + floor($repoint);
 					$persons->update();
