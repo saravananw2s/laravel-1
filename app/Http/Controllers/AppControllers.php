@@ -170,7 +170,14 @@ class AppControllers extends Controller
 					$persons->update();
 					$orders->wallet = 20;
 				}				
-			};
+			}
+			else{
+				 $persons = Persons::where('ID',$request->userid)->first();
+				 $repoint = $request->totalprice / 100;
+				 $persons->wallet = $persons->wallet + (floor($repoint) * 2);
+				 $persons->update();
+
+			}
 		    $orders->save();
 			Session::put('number',$request->number);
 			Session::put('name',$request->name); 	
