@@ -21,12 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
 Route::post('/adminsignin',"AppControllers@adminsignin");
-
+Route::post('/empsignup',"AppControllers@empsignup");
 Route::post('/placeorder',"AppControllers@postOrder");
 Route::get('/getitem',"AppControllers@items");
 Route::get('/history',"AppControllers@history");
 Route::get('/editprofile',"AppControllers@editprofile");
-Route::get('/showOrders',"AppControllers@showOrders");
+Route::post('/showOrders',"AppControllers@showOrders");
 Route::post('/stschage',"AppControllers@stschage");
 Route::get('/showuser',"AppControllers@showusers");
 Route::post('/updateprice',"AppControllers@updateprice");

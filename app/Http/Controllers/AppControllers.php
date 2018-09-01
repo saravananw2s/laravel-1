@@ -24,7 +24,10 @@ use Validator;
 class AppControllers extends Controller
 {
 	public function emp(Request $request){
-		return Persons::where('role','emp')->get();	
+		if($request->pincode == '00000'){
+		return Persons::where('role','emp')->get();
+		}
+		return Persons::where('role','emp')->where('pincode',$request->pincode)->get();	
     }
 	public function delivery(Request $request){
 		$orders = Orders::where('ID',$request->id)->first();
@@ -82,7 +85,28 @@ class AppControllers extends Controller
       		$Orders->employee = $request->employee;
 		$Orders->update();
 
-    }
+    }   public function empsignup(Request $request){
+	try{
+	$Persons = Persons::where('number',$request->number)->first();
+	if(count($Persons)!=0){
+	 $data = json_encode(array('login' => "invaliduser", 'Persons' => "Mobile Number Alredy Exist"));
+                return $data;
+	}
+		$Persons = new Persons();
+		$Persons->name = $request->name;
+		$Persons->number = $request->number;
+		$Persons->password = $request->password;
+		$Persons->username = $request->number;
+		$Persons->pincode = $request->pincode;
+		$Persons->street =  $request->add;
+            $Persons->street1 =  $request->add1;
+                $Persons->city =  $request->add2;
+		$Persons->role = 'emp';
+		$Persons->save();
+	}catch(Exception $e){
+	return $e;
+	}
+	}
 	public function signup(Request $request){
 	    $Persons = Persons::where('number',$request->number)->first();
 	    if(count($Persons)!=0){
@@ -205,8 +229,14 @@ class AppControllers extends Controller
 		$data = json_encode(array('ch' => $ch, 'mt' => $mt,'fs'=>$fs,'bf'=>$bf,'fk'=>$fk,'ms'=>$fs,'ms'=>$ms));
 		return $data;
 	}
-	public function showOrders(){
+	public function showOrders(Request $request){
+		//return "sts";
+		//return $request->pincode;
+		if($request->pincode == '00000'){
 		$orders = Orders::where('sts','NOT')->get();
+                return $orders;
+		}
+		$orders = Orders::where('sts','NOT')->where('store',$request->pincode)->get();
 		return $orders;		
 	}
 	public function stschage(Request $request){

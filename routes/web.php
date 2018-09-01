@@ -32,7 +32,7 @@ Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
 Route::post('/placeorder',"AppControllers@postOrder");
 Route::get('/items',"AppControllers@items");
-Route::get('/showOrders',"AppControllers@showOrders");
+//Route::get('/showOrders',"AppControllers@showOrders");
 Route::post('/stschage',"AppControllers@stschage");
 
 
