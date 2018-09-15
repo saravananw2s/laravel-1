@@ -1,0 +1,45 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Module\Persons;
+use App\Module\Orders;
+use App\Module\Items;
+use App\Module\Slats;
+use App\Module\offer;
+use App\Module\myoffers;
+use App\Module\pincode;
+use App\Module\stores;
+use App\Module\ventor;
+
+use Illuminate\Http\Response;
+
+use Tzsk\Sms\Facade\Sms;
+use Session;
+#use Twilio\Rest\Client;
+
+use Validator;
+
+class NewController extends Controller
+{
+public function showstores(){
+$Persons= ventor::all();
+$data = json_encode(array('Persons' => $Persons));
+                                return $data;
+}
+public function showemployees(){
+$Persons= Persons::where('role','emp')->get();
+$data = json_encode(array('Persons' => $Persons));
+                                return $data;
+}
+public function showpincodes(){
+$Persons= stores::all();
+$data = json_encode(array('Persons' => $Persons));
+                                return $data;
+}
+public function approve(Request $request){
+$Persons = Persons::where('ID',$request->id)->first();
+$Persons->approve
+}
+}

@@ -26,7 +26,9 @@ Route::get('/ship', function () {
 Route::get('/location', function () {
     return view('location');
 });
-
+Route::get('zohoverify/verifyforzoho.html',function (){
+return "1535721928169";
+});
 
 Route::post('/signup',"AppControllers@signup");
 Route::post('/signin',"AppControllers@login");
