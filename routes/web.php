@@ -17,14 +17,14 @@ Route::get('/', function () {
 Route::get('/offer', function () {
     return view('login');
 });
-Route::get('/about', function () {
-    return view('dashboard');
+Route::get('/about.html', function () {
+    return view('about');
 });
-Route::get('/ship', function () {
-    return view('page');
+Route::get('/elements.html', function () {
+    return view('ship');
 });
-Route::get('/location', function () {
-    return view('location');
+Route::get('/contact.html', function () {
+    return view('contact');
 });
 Route::get('zohoverify/verifyforzoho.html',function (){
 return "1535721928169";
