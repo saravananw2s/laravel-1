@@ -41,7 +41,7 @@
 					<div class="container">
 				  		<div class="row justify-content-center">
 						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+						        <a href=""><img src="https://s3.ap-south-1.amazonaws.com/gononveg/go+(3).png" alt="" title="" /></a>
 						      </div>
 				  		</div>			  					
 					</div>
@@ -50,7 +50,7 @@
 					<div class="row align-items-center justify-content-center d-flex">			
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
+				          <li><a href="">Home</a></li>
 				          <li><a href="about.html">About</a></li>				         		<li><a href="elements.html">Shipment Policy</a></li>					        	    
 				          <li><a href="contact.html">Contact</a></li>
 				        </ul>
@@ -65,7 +65,7 @@
 					<div class="row fullscreen align-items-center justify-content-between">
 						<div class="col-lg-12 banner-content">
 							<h6 class="text-white">Bonding in new way</h6>
-							<h1 class="text-white">GONON VEG</h1>
+							<h1 class="text-white">GONONVEG</h1>
 							<p class="text-white">
 								Gononveg.com is a non vegetarian meat,fish and food ordering and delivery company based out of Chennai, India.
 							</p>
@@ -81,7 +81,7 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6 home-about-left">
-							<h1>About Gonon Veg</h1>
+							<h1>About GononVeg</h1>
 							<p style="text-align: justify">
 								"Gononveg.com is a non vegetarian meat,fish and food ordering and delivery company based out of Chennai, India. Gononveg.com was inspired by the thought of providing a complete non veg ordering and delivery solution from the best near by shops and restaurants to the person.<br> 
 A single window for ordering from a wide range of shops and restaurants, we have our own exclusive delivery person to pickup orders from shops and restaurants and deliver it to customers .
@@ -132,7 +132,7 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 										<h4>WITH SKIN</h4>
 									</div>			
 									<p>
-										Chicken is a nutritious and delicious meat which can beprepared in<br> many ways. Cooking Chicken with skin helps to make meat soak up oil on itself as long as the chicken cooked at 350 degree or higher. Draining chicken on the paper towels will remove any type of extra oil from the skin. It’s a good idea to eat chicken with skin (every once in a while) in order to keep your low fat diet on track.
+										Chicken is a nutritious and delicious meat <br>which can beprepared in many ways. <br>Cooking Chicken with skin helps to make meat soak up oil on itself as long as the chicken cooked at 350 degree or higher. Draining chicken on the paper towels will remove any type of extra oil from the skin. It’s a good idea to eat chicken with skin (every once in a while) in order to keep your low fat diet on track.
 									</p>									
 								</div>
                             </div>
@@ -370,14 +370,14 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 								<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
 								<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
 								<input type="text" class="form-control" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" >		
-								<input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'" >									
+							 									
 								<div class="form-select" id="service-select">
 									<select>
-										<option data-display="">Select Event</option>
-										<option value="1">Event One</option>
-										<option value="2">Event Two</option>
-										<option value="3">Event Three</option>
-										<option value="4">Event Four</option>
+										<option data-display="">Select Type</option>
+										<option value="1">Delivery Boy</option>
+										<option value="2">Gnv Outlets</option>
+										<option value="3">Branch Choice</option>
+									
 									</select>
 								</div>									
 								<button class="primary-btn text-uppercase mt-20">JOIN OUR TEAM</button>
@@ -454,7 +454,7 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 						<div class="active-review-carusel">
 							<div class="single-review">
 								<img src="img/user.png" alt="">
-								<h4>Karthick</h4>
+								<h4>Amuthan A</h4>
 								<div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
@@ -463,7 +463,35 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“They deliver everything on time...here quality meets with perfection..Thoroughly Loved it !!!”
+								</p>
+							</div>
+							<div class="single-review">
+								<img src="img/user.png" alt="">
+								<h4>Balvin boys</h4>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>								
+								</div>	
+								<p>
+									“Awesome app, very useful app for house wife's daily pressure, tension free and really very nice app , super guys , thanks a lot”
+								</p>
+							</div>	
+							<div class="single-review">
+								<img src="img/user.png" alt="">
+								<h4>Ramu</h4>
+								<div class="star">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>								
+								</div>	
+								<p>
+									“Awesome app. Made our work so easy. Don't need to worry on Sundays about roaming in markets anymore”
 								</p>
 							</div>
 							<div class="single-review">
@@ -474,38 +502,10 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>								
+									<span class="fa fa-star checked"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
-								</p>
-							</div>	
-							<div class="single-review">
-								<img src="img/user.png" alt="">
-								<h4>Thijoen</h4>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>								
-								</div>	
-								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
-								</p>
-							</div>
-							<div class="single-review">
-								<img src="img/user.png" alt="">
-								<h4>Sachin Samson</h4>
-								<div class="star">
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>								
-								</div>	
-								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“perfect app . And really a excellent service and delivering the quality product well and before expected time.”
 								</p>
 							</div>														
 						</div>
@@ -528,13 +528,13 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<h4>Morning Slots</h4>
 									<ul class="hr-list">
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>07.00 am - 09.00 am</span>
+											<span>Saturday - Sunday</span> <span>06.30 am - 08.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>09.00 am - 11.00 am</span>
+											<span>Saturday - Sunday</span> <span>08.30 am - 10.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>11.00 am - 01.00 pm</span>
+											<span>Saturday - Sunday</span> <span>10.30 am - 12.30 pm</span>
 										</li>	
 																												
 									</ul>
@@ -546,12 +546,15 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<ul class="hr-list">
 											
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>02.00 pm - 04.00 pm</span>
+											<span>Saturday - Sunday</span> <span>02.30 pm - 04.30 pm</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>04.00 pm - 06.00 pm</span>
+											<span>Saturday - Sunday</span> <span>04.30 pm - 06.30 pm</span>
 										</li>																			
-									</ul>
+									        <li class="d-flex justify-content-between">
+                                                                                        <span>Saturday - Sunday</span> <span>06.30 pm - 08.30 pm
+                                                                                </li>
+                                                                          </ul>
 								</div>
 							</div>
 							<div class="col-lg-4  col-md-6 col-sm-6">

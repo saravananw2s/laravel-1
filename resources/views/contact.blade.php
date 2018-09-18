@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Macro</title>
+		<title>GONONVEG</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -36,7 +36,7 @@
 					<div class="container">
 				  		<div class="row justify-content-center">
 						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+						        <a href="/"><img src="https://s3.ap-south-1.amazonaws.com/gononveg/go+(3).png" alt="" title="" /></a>
 						      </div>
 				  		</div>			  					
 					</div>
@@ -45,7 +45,7 @@
 					<div class="row align-items-center justify-content-center d-flex">			
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
+				          <li><a href="/">Home</a></li>
 				          <li><a href="about.html">About</a></li>				         		<li><a href="elements.html">Shipment Policy</a></li>					        	    
 				          <li><a href="contact.html">Contact</a></li>
 				        </ul>
@@ -63,7 +63,7 @@
 							<h1 class="text-white">
 								Contact Us				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
 						</div>	
 					</div>
 				</div>
@@ -74,16 +74,19 @@
 			<section class="contact-page-area section-gap">
 				<div class="container">
 					<div class="row">
-						<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+						<div class="map-wrap" style="width:100%; height: 445px;border: grey solid 1px">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.273269935988!2d80.17390321482117!3d12.890141790909361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52599df9accfe5%3A0xbda7728d192e9bcf!2sIDUS+GROUPS!5e0!3m2!1sen!2sin!4v1526017840945" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
 						<div class="col-lg-4 d-flex flex-column address-wrap">
 							<div class="single-contact-address d-flex flex-row">
 								<div class="icon">
 									<span class="lnr lnr-home"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Binghamton, New York</h5>
+									<h5>Plot No. 321, LIG II,4th Street,</h5>
 									<p>
-										4343 Hinkle Deegan Lake Road
+										TNHB Colony, Mambakkam Main Road,<br>
+										SITHALAPAKKAM,Chennai - 600126.
 									</p>
 								</div>
 							</div>
@@ -92,7 +95,7 @@
 									<span class="lnr lnr-phone-handset"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (958) 9865 562</h5>
+									<h5>+91 8428 750 750</h5>
 									<p>Mon to Fri 9am to 6 pm</p>
 								</div>
 							</div>
@@ -101,7 +104,7 @@
 									<span class="lnr lnr-envelope"></span>
 								</div>
 								<div class="contact-details">
-									<h5>support@colorlib.com</h5>
+									<h5>info.gononveg.com</h5>
 									<p>Send us your query anytime!</p>
 								</div>
 							</div>														
@@ -141,13 +144,13 @@
 									<h4>Morning Slots</h4>
 									<ul class="hr-list">
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>07.00 am - 09.00 am</span>
+											<span>Saturday - Sunday</span> <span>06.30 am - 08.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>09.00 am - 11.00 am</span>
+											<span>Saturday - Sunday</span> <span>08.30 am - 10.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>11.00 am - 01.00 pm</span>
+											<span>Saturday - Sunday</span> <span>10.30 am - 12.30 pm</span>
 										</li>	
 																												
 									</ul>
@@ -159,12 +162,15 @@
 									<ul class="hr-list">
 											
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>02.00 pm - 04.00 pm</span>
+											<span>Saturday - Sunday</span> <span>02.30 pm - 04.30 pm</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>04.00 pm - 06.00 pm</span>
+											<span>Saturday - Sunday</span> <span>04.30 pm - 06.30 pm</span>
 										</li>																			
-									</ul>
+									       <li class="d-flex justify-content-between">
+                                                                                        <span>Saturday - Sunday</span> <span>06.30 pm - 08.30 pm
+                                                                                </li>
+                                                                        </ul>
 								</div>
 							</div>
 							<div class="col-lg-4  col-md-6 col-sm-6">

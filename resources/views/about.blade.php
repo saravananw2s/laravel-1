@@ -36,7 +36,7 @@
 					<div class="container">
 				  		<div class="row justify-content-center">
 						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+						        <a href=""><img src="https://s3.ap-south-1.amazonaws.com/gononveg/go+(3).png" alt="" title="" /></a>
 						      </div>
 				  		</div>			  					
 					</div>
@@ -45,7 +45,7 @@
 					<div class="row align-items-center justify-content-center d-flex">			
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
+				          <li><a href="/">Home</a></li>
 				          <li><a href="about.html">About</a></li>				         		<li><a href="elements.html">Shipment Policy</a></li>					        	    
 				          <li><a href="contact.html">Contact</a></li>
 				        </ul>
@@ -63,7 +63,7 @@
 							<h1 class="text-white">
 								About Us				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
 						</div>	
 					</div>
 				</div>
@@ -96,7 +96,7 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">What Kind of Services we Offer</h1>
+								<h1 class="mb-10">Why Us?</h1>
 								<p>Who are in extremely love with eco friendly system.</p>
 							</div>
 						</div>
@@ -105,39 +105,39 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 						<div class="col-lg-4">
 							<div class="single-service">
 								<div class="thumb">
-									<img src="img/about/s1.jpg" alt="">
+									<img src="https://s3.ap-south-1.amazonaws.com/gononveg/g5.jpg" alt="">
 								</div>
 								<a href="#">
-									<h4>Bread Fruit Cheese Sandwich</h4>
+									<h4>Mutton</h4>
 								</a>
-								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								<p style="text-align: justify">
+								Hygiene controlled Meat (fresh meat) without any compromises on weight and wellness is butchered. Packed in a clean way as per packaging measure and dispatched. Delivered within 120 minutes from the order placed time to your door-step.
 								</p>								
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-service">
 								<div class="thumb">
-									<img src="img/about/s2.jpg" alt="">
+									<img src="https://s3.ap-south-1.amazonaws.com/gononveg/g2.jpg" alt="">
 								</div>
 								<a href="#">
-									<h4>Beef Cutlet with Spring Onion</h4>
+									<h4>Seafood</h4>
 								</a>	
-								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								<p style="text-align: justify">
+								All seafood products are provided in a qualitative way by undergoing cleaning and alike packing methods. Delivered at your door-step within 120 minutes of the order placed time from the slot time.
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-4">
 							<div class="single-service">
 								<div class="thumb">
-									<img src="img/about/s3.jpg" alt="">
+									<img src="img/g1.jpg" alt="">
 								</div>
 								<a href="#">
-									<h4>Meat with sauce & Vegetables</h4>
+									<h4>Chicken</h4>
 								</a>	
-								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								<p style="text-align: justify">
+									Chicken is maintained in a natural habitat and hygienic environment with absolute care and concern. No compromise on weight and health chicken to meet the stringent quality rules. Chicken (fresh meat) is then packaged in a clean way as per packaging measure. Dispatched and delivered to your home within 120 minutes from order placed time.
 								</p>
 							</div>
 						</div>												
@@ -223,13 +223,13 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<h4>Morning Slots</h4>
 									<ul class="hr-list">
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>07.00 am - 09.00 am</span>
+											<span>Saturday - Sunday</span> <span>06.30 am - 08.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>09.00 am - 11.00 am</span>
+											<span>Saturday - Sunday</span> <span>08.30 am - 10.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>11.00 am - 01.00 pm</span>
+											<span>Saturday - Sunday</span> <span>10.30 am - 12.30 pm</span>
 										</li>	
 																												
 									</ul>
@@ -241,11 +241,14 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<ul class="hr-list">
 											
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>02.00 pm - 04.00 pm</span>
+											<span>Saturday - Sunday</span> <span>02.30 pm - 04.30 pm</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>04.00 pm - 06.00 pm</span>
-										</li>																			
+											<span>Saturday - Sunday</span> <span>04.30 pm - 06.30 pm</span>
+										</li>
+										<li class="d-flex justify-content-between">
+                                                                                        <span>Saturday - Sunday</span> <span>06.30 pm - 08.30 pm
+                                                                                </li>																			
 									</ul>
 								</div>
 							</div>

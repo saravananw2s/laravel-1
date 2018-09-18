@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Macro</title>
+		<title>GONONVEG</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -36,7 +36,7 @@
 					<div class="container">
 				  		<div class="row justify-content-center">
 						      <div id="logo">
-						        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+						        <a href=""><img src="https://s3.ap-south-1.amazonaws.com/gononveg/go+(3).png" alt="" title="" /></a>
 						      </div>
 				  		</div>			  					
 					</div>
@@ -45,7 +45,7 @@
 					<div class="row align-items-center justify-content-center d-flex">			
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li><a href="index.html">Home</a></li>
+				          <li><a href="/">Home</a></li>
 				          <li><a href="about.html">About</a></li>				         		<li><a href="elements.html">Shipment Policy</a></li>					        	    
 				          <li><a href="contact.html">Contact</a></li>
 				        </ul>
@@ -61,9 +61,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Elements		
+								Shipment Policy		
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="elements.html"> Elements</a></p>
+							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="elements.html"> Shipment Policy</a></p>
 						</div>	
 					</div>
 				</div>
@@ -120,13 +120,13 @@
 									<h4>Morning Slots</h4>
 									<ul class="hr-list">
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>07.00 am - 09.00 am</span>
+											<span>Saturday - Sunday</span> <span>06.30 am - 08.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>09.00 am - 11.00 am</span>
+											<span>Saturday - Sunday</span> <span>08.30 am - 10.30 am</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>11.00 am - 01.00 pm</span>
+											<span>Saturday - Sunday</span> <span>10.30 am - 12.30 pm</span>
 										</li>	
 																												
 									</ul>
@@ -138,12 +138,15 @@
 									<ul class="hr-list">
 											
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>02.00 pm - 04.00 pm</span>
+											<span>Saturday - Sunday</span> <span>02.30 pm - 04.30 pm</span>
 										</li>
 										<li class="d-flex justify-content-between">
-											<span>Monday - Friday</span> <span>04.00 pm - 06.00 pm</span>
+											<span>Saturday - Sunday</span> <span>04.30 pm - 06.30 pm</span>
 										</li>																			
-									</ul>
+										<li class="d-flex justify-content-between">
+                                                                                        <span>Saturday - Sunday</span> <span>06.30 pm - 08.30 pm
+                                                                                </li>
+                                                                	</ul>
 								</div>
 							</div>
 							<div class="col-lg-4  col-md-6 col-sm-6">
