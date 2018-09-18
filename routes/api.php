@@ -74,4 +74,8 @@ Route::post('/storehistory',"AppControllers@storehistory");
 
 
 Route::get('/shareid',"AppControllers@shareid");
+Route::get('/appversion',function(){
+  return "0.1";
+});
+
 

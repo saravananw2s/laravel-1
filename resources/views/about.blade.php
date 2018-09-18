@@ -118,6 +118,19 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 						<div class="col-lg-4">
 							<div class="single-service">
 								<div class="thumb">
+									<img src="img/g1.jpg" alt="">
+								</div>
+								<a href="#">
+									<h4>Chicken</h4>
+								</a>	
+								<p style="text-align: justify">
+									Chicken is maintained in a natural habitat and hygienic environment with absolute care and concern. No compromise on weight and health chicken to meet the stringent quality rules. Chicken (fresh meat) is then packaged in a clean way as per packaging measure. Dispatched and delivered to your home within 120 minutes from order placed time.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-service">
+								<div class="thumb">
 									<img src="https://s3.ap-south-1.amazonaws.com/gononveg/g2.jpg" alt="">
 								</div>
 								<a href="#">
@@ -128,19 +141,7 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 								</p>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="single-service">
-								<div class="thumb">
-									<img src="img/g1.jpg" alt="">
-								</div>
-								<a href="#">
-									<h4>Chicken</h4>
-								</a>	
-								<p style="text-align: justify">
-									Chicken is maintained in a natural habitat and hygienic environment with absolute care and concern. No compromise on weight and health chicken to meet the stringent quality rules. Chicken (fresh meat) is then packaged in a clean way as per packaging measure. Dispatched and delivered to your home within 120 minutes from order placed time.
-								</p>
-							</div>
-						</div>												
+																		
 					</div>
 				</div>	
 			</section>
@@ -153,7 +154,7 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 						<div class="active-review-carusel">
 							<div class="single-review">
 								<img src="img/user.png" alt="">
-								<h4>Hulda Sutton</h4>
+								<h4>Amuthan A</h4>
 								<div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
@@ -162,12 +163,12 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“They deliver everything on time...here quality meets with perfection..Thoroughly Loved it !!!”
 								</p>
 							</div>
 							<div class="single-review">
 								<img src="img/user.png" alt="">
-								<h4>Hulda Sutton</h4>
+								<h4>Balvin boys</h4>
 								<div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
@@ -176,41 +177,42 @@ Having our own employee gives us the flexibility to offer customers a no minimum
 									<span class="fa fa-star"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Awesome app, very useful app for house wife's daily pressure, tension free and really very nice app , super guys , thanks a lot”
 								</p>
 							</div>	
 							<div class="single-review">
 								<img src="img/user.png" alt="">
-								<h4>Hulda Sutton</h4>
+								<h4>Ramu</h4>
 								<div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>								
+									<span class="fa fa-star checked"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“Awesome app. Made our work so easy. Don't need to worry on Sundays about roaming in markets anymore”
 								</p>
 							</div>
 							<div class="single-review">
 								<img src="img/user.png" alt="">
-								<h4>Hulda Sutton</h4>
+								<h4>Saravanan</h4>
 								<div class="star">
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
 									<span class="fa fa-star checked"></span>
-									<span class="fa fa-star"></span>								
+									<span class="fa fa-star checked"></span>								
 								</div>	
 								<p>
-									“Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.”
+									“perfect app . And really a excellent service and delivering the quality product well and before expected time.”
 								</p>
 							</div>														
 						</div>
 					</div>
 				</div>	
 			</section>
+
 			<!-- End review Area -->				
 
 			<!-- start footer Area -->		
